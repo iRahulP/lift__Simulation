@@ -1,6 +1,6 @@
 import React from 'react'
 
-const lift = () => {
+const Lift = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const lift = () => {
     )
 }
 
-export default lift
+export default Lift;

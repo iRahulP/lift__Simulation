@@ -1,25 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import UserInput from './components/UserInput';
+import Lift from './components/Lift';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const [ step, setStep ] = useState(1);
+  
+  const nextStep = () => {
+    setStep(step + 1);
+  }
+
+  const handleChange = (input) => (e) => {
+    setStep(e.target.value);
+  }
+
+  switch(step) {
+    case 1:
+      return (
+        <UserInput 
+          nextStep={nextStep}
+          handleChange={handleChange}
+        />
+      );
+    default:
+      return (
+        <Lift 
+          nextStep={nextStep}
+          handleChange={handleChange}
+        />
+      ); 
+  }
 }
 
 export default App;
