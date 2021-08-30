@@ -23,13 +23,19 @@ function App() {
           handleChange={handleChange}
         />
       );
-    default:
+    case 2:
       return (
         <Lift 
           nextStep={nextStep}
           handleChange={handleChange}
         />
-      ); 
+      );
+    default:
+      return (
+        <div>
+          <h1>DONE</h1>
+        </div>
+      ) 
   }
 }
 
