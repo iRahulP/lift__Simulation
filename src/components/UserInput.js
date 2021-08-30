@@ -6,8 +6,8 @@ import { useState } from 'react';
 
 const UserInput = (props) => {
 
-    const [ floors, setFloors ]= useState(null);
-    const [ lifts, setLifts ]= useState(null);
+    const [ floors, setFloors ]= useState('');
+    const [ lifts, setLifts ]= useState('');
 
     const [loading, setLoading] = useState(false);
 
@@ -16,14 +16,14 @@ const UserInput = (props) => {
         
         setLoading(true)
         setTimeout(() => { 
-            const check = !floors && !lifts;
+            const check = floors && lifts;
             console.log(check);
             if (check){
                 props.nextStep();
             }
             else{
-                setFloors(null);
-                setLifts(null);
+                setFloors('');
+                setLifts('');
             }    
             setLoading(false)
         }, 1000)
@@ -31,7 +31,7 @@ const UserInput = (props) => {
 
     return (
             <form className="user-info" onSubmit={continueToNext}>
-                <h3>User ~ Info</h3>
+                <h3>Info</h3>
 
                 <div>
                     <label htmlFor="floors">

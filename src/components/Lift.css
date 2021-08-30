@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .floorSection {
+    display: flex;
+    width: 60%;
+    height: 80vh;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  
+  .floors {
+    background-color: whitesmoke;
+    width: 98%;
+    margin: 10px auto;
+    height: 127px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid black;
+  }
+  
+  .buttonsDiv {
+    display: flex;
+    flex-direction: column;
+    width: 7%;
+  }
+  
+  .bttn {
+    cursor: pointer;
+    height: 25px;
+    border-radius: 3px;
+  }
+  
+  .liftDiv {
+    width: 98%;
+    margin: 10px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .lift {
+    border: 1px solid green;
+    background-color: yellowgreen;
+    height: 70px;
+    width: 48px;
+    position: absolute;
+    left: 50%;
+    /* transition-delay: 1s; */
+    transition-duration: 1s;
+  }
+  
+  
+  
