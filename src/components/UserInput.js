@@ -31,7 +31,7 @@ const UserInput = (props) => {
 
     return (
             <form className="user-info" onSubmit={continueToNext}>
-                <h3>Info</h3>
+                <h3>Lift Simulation</h3>
 
                 <div>
                     <label htmlFor="floors">
